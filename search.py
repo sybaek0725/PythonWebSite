@@ -145,7 +145,7 @@ def perform_search(search_term):
     # driver.find_element(By.CLASS_NAME,'m-header-search-form-btn').click()
 
     # 20
-    # 🚨 LCSC Electronics :  O
+    # LCSC Electronics :  O
     # driver.get('https://www.lcsc.com/')
     # driver.find_element(By.CSS_SELECTOR, "div.v-card__title button").click()
     # driver.find_element('id', 'input-23').send_keys('aaa')
