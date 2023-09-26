@@ -49,6 +49,3 @@ $ pip install Flask
     /hello.py
     /search.py
 ```
-
-# MicroworksSourcing
-# MicroworksSourcing
