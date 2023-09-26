@@ -44,6 +44,8 @@ $ pip install selenium
 ### Flask 실행
 ```shell
 $ flask --app {{실행할 파일명}} run
+# or Python 실행
+$ python {{실행할 파일명.py}}
 ```
 
 ### 디렉토리 구조
