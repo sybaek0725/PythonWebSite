@@ -36,6 +36,16 @@ $ source activate
 $ pip install Flask  
 ```
 
+### Selenium 설치
+```shell
+$ pip install selenium  
+```
+
+### Flask 실행
+```shell
+$ flask --app {{실행할 파일명}} run
+```
+
 ### 디렉토리 구조
 
 ```shell
