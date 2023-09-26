@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script>
+        function goBack() {
+            window.location.href = '/';
+        }
+    </script>
+  </head>
+  <body>
+    <h1>검색 결과</h1>
+    <p>검색어: {{ search_term }}</p>
+    <button onclick="goBack()">이전</button>
+  </body>
+</html>
