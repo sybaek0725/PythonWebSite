@@ -1,4 +1,4 @@
-# PythonWebSite
+# Microworks Sourcing
 
 영업활동에 따른 전자부품 Stock 구매를 위한 견적작업 대상 사이트의 검색 결과를 종합하여 게시하기 위한 Python 기반의 프로젝트입니다.
 - 로그인 및 검색 자동화
