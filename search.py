@@ -1,12 +1,13 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support import expected_conditions as EC
 import time
-
 
 def perform_search(search_term):
     chrome_options = Options()
@@ -19,7 +20,9 @@ def perform_search(search_term):
     chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
     chrome_options.add_argument("--start-maximized")  # 브라우저 최대화
 
-    driver = webdriver.Chrome(options=chrome_options)
+    # 크롬 드라이버 최신 버전 설정
+    service = ChromeService(executable_path=ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=chrome_options)
 
     # 1
     # 검색
