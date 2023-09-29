@@ -14,7 +14,7 @@ def perform_search(search_term):
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_argument("--disable-extensions")
     # 시크릿 창 모드
-    chrome_options.add_argument("--incognito")
+    # chrome_options.add_argument("--incognito")
     chrome_options.add_experimental_option('useAutomationExtension', False)
     chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
     chrome_options.add_argument("--start-maximized")  # 브라우저 최대화
@@ -38,11 +38,12 @@ def perform_search(search_term):
 
     # 2
     # Findchips : O
-    # driver.get('https://www.findchips.com/')
+    driver.get('https://www.findchips.com/')
     # # 검색
-    # element = driver.find_element(By.CLASS_NAME, 'search-field')
-    # element.send_keys(search_term)
-    # element.send_keys(Keys.RETURN)
+    element = driver.find_element(By.CLASS_NAME, 'search-field')
+    element.send_keys(search_term)
+    element.send_keys(Keys.RETURN)
+
     # 로그인 O 아이디 비밀번호 전달 못받음
     # driver.get('https://www.findchips.com/signin')
     # element = driver.find_element(By.ID, 'email-address')
@@ -320,64 +321,66 @@ def perform_search(search_term):
 
 
     # 탭으로 연속 검색 테스트
-    driver.get('https://www.findchips.com/')
+    # driver.get('https://www.findchips.com/')
+    #
+    # element = driver.find_element(By.CLASS_NAME, 'search-field')
+    # element.send_keys(search_term)
+    # element.send_keys(Keys.RETURN)
+    # driver.execute_script("window.open('', '_blank');")
+    # driver.switch_to.window(driver.window_handles[1])
+    #
+    # driver.get('https://www.findic.kr/')
+    # driver.find_element(By.ID, 'search-kw').send_keys(search_term)
+    # driver.find_element(By.ID, 'search-submit').click()
+    # driver.execute_script("window.open('', '_blank');")
+    # driver.switch_to.window(driver.window_handles[2])
+    #
+    # driver.get('http://www.partsner.com/')
+    # element = driver.find_element(By.ID, 'q_txt')
+    # element.send_keys(search_term)
+    # element.send_keys(Keys.RETURN)
+    # driver.execute_script("window.open('', '_blank');")
+    # driver.switch_to.window(driver.window_handles[3])
+    #
+    # driver.get('https://www.allparts.co.kr/')
+    # element = driver.find_element(By.ID, 'search_part')
+    # element.send_keys(search_term)
+    # element.send_keys(Keys.RETURN)
+    # driver.execute_script("window.open('', '_blank');")
+    # driver.switch_to.window(driver.window_handles[4])
+    #
+    # driver.get('https://m.netcomponents.com/ko/home/index/')
+    # element = driver.find_element(By.CLASS_NAME, 'searched-part')
+    # element.send_keys(search_term)
+    # element.send_keys(Keys.RETURN)
+    # driver.execute_script("window.open('', '_blank');")
+    # driver.switch_to.window(driver.window_handles[5])
+    #
+    # driver.get('https://icsource.com/Home/Index.aspx')
+    # element = driver.find_element(By.ID, 'ctl00_txtSearchTerm')
+    # element.send_keys(search_term)
+    # element.send_keys(Keys.RETURN)
+    # driver.execute_script("window.open('', '_blank');")
+    # driver.switch_to.window(driver.window_handles[6])
+    #
+    # driver.get('https://www.brokerforum.com/')
+    # element = driver.find_element(By.ID, 'originalFullPartNumber')
+    # element.send_keys(search_term)
+    # element.send_keys(Keys.RETURN)
+    # driver.execute_script("window.open('', '_blank');")
+    # driver.switch_to.window(driver.window_handles[7])
+    #
+    # driver.get('https://www.digipart.com/')
+    # element = driver.find_element('id', 'term')
+    # element.send_keys(search_term)
+    # element.send_keys(Keys.RETURN)
+    # driver.execute_script("window.open('', '_blank');")
+    # driver.switch_to.window(driver.window_handles[8])
+    #
+    # driver.get('https://www.digipart.com/')
+    # element = driver.find_element(By.XPATH, '/ html / body / div[1] / div / div[1] / form / div / div / input')
+    # element.send_keys(search_term)
+    # element = driver.find_element(By.XPATH, '/ html / body / div[1] / div / div[1] / form / div / div / span / button')
+    # element.click()
 
-    element = driver.find_element(By.CLASS_NAME, 'search-field')
-    element.send_keys(search_term)
-    element.send_keys(Keys.RETURN)
-    driver.execute_script("window.open('', '_blank');")
-    driver.switch_to.window(driver.window_handles[1])
-
-    driver.get('https://www.findic.kr/')
-    driver.find_element(By.ID, 'search-kw').send_keys(search_term)
-    driver.find_element(By.ID, 'search-submit').click()
-    driver.execute_script("window.open('', '_blank');")
-    driver.switch_to.window(driver.window_handles[2])
-
-    driver.get('http://www.partsner.com/')
-    element = driver.find_element(By.ID, 'q_txt')
-    element.send_keys(search_term)
-    element.send_keys(Keys.RETURN)
-    driver.execute_script("window.open('', '_blank');")
-    driver.switch_to.window(driver.window_handles[3])
-
-    driver.get('https://www.allparts.co.kr/')
-    element = driver.find_element(By.ID, 'search_part')
-    element.send_keys(search_term)
-    element.send_keys(Keys.RETURN)
-    driver.execute_script("window.open('', '_blank');")
-    driver.switch_to.window(driver.window_handles[4])
-
-    driver.get('https://m.netcomponents.com/ko/home/index/')
-    element = driver.find_element(By.CLASS_NAME, 'searched-part')
-    element.send_keys(search_term)
-    element.send_keys(Keys.RETURN)
-    driver.execute_script("window.open('', '_blank');")
-    driver.switch_to.window(driver.window_handles[5])
-
-    driver.get('https://icsource.com/Home/Index.aspx')
-    element = driver.find_element(By.ID, 'ctl00_txtSearchTerm')
-    element.send_keys(search_term)
-    element.send_keys(Keys.RETURN)
-    driver.execute_script("window.open('', '_blank');")
-    driver.switch_to.window(driver.window_handles[6])
-
-    driver.get('https://www.brokerforum.com/')
-    element = driver.find_element(By.ID, 'originalFullPartNumber')
-    element.send_keys(search_term)
-    element.send_keys(Keys.RETURN)
-    driver.execute_script("window.open('', '_blank');")
-    driver.switch_to.window(driver.window_handles[7])
-
-    driver.get('https://www.digipart.com/')
-    element = driver.find_element('id', 'term')
-    element.send_keys(search_term)
-    element.send_keys(Keys.RETURN)
-    driver.execute_script("window.open('', '_blank');")
-    driver.switch_to.window(driver.window_handles[8])
-
-    driver.get('https://www.digipart.com/')
-    element = driver.find_element(By.XPATH, '/ html / body / div[1] / div / div[1] / form / div / div / input')
-    element.send_keys(search_term)
-    element = driver.find_element(By.XPATH, '/ html / body / div[1] / div / div[1] / form / div / div / span / button')
-    element.click()
+# perform_search('tttt')

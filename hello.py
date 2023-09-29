@@ -17,4 +17,6 @@ def search():
 
     return render_template('results.html', search_term=search_term)
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    # 서버 테스트용
+    app.run('0.0.0.0', port=5000, debug=True)
